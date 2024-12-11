@@ -1,0 +1,56 @@
+<html lang="em">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, initial=scale=1.0">
+	<title>WHETHER APP</title>
+	<style>
+		body{
+			font-family:Arial, sans-serif;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(to bottom, #87CEEB, #f0f8ff);
+			color: #333;
+		}
+		.weather-app{
+			padding: 20px;
+		}
+		.input-container{
+			margin-bottomL 20px;
+		}
+		.weather-card{
+			display: inline-block;
+			padding: 20px;
+			border-radius: #fff;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+		}
+		.wheather-info{
+			margin-top: 20px;
+		}
+		button{
+			background-color: #007BFF;
+			color: white;
+			border: none;
+			padding: 10px 15px;
+			border-radius: 5px;
+			corsor: pointer;
+		}
+		button.hover{
+			background-color: #0056b3;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="weather-app">
+			<h1> WHEATHER APP </h1>
+			<div class="input-xontainer">
+				<input type="text" id="location" placeholder="Enter location" ?>
+				<button onclick="fetchWeather()" GER WHEATHER </button>
+			</div>
+			<div class="weather-card" id="weather-card">
+				<p id="weatherInfo"> Enter a location to see the weather ! </p>
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    .timer {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+    .laps {
+      margin-top: 20px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="timer">00:00:00</div>
+  <button onclick="startTimer()">Start</button>
+  <button onclick="pauseTimer()">Pause</button>
+  <button onclick="resetTimer()">Reset</button>
+  <div class="laps"></div>
+
+  <script>
+    let timer = 0, intervalId, running = false;
+    const timerDisplay = document.querySelector('.timer');
+    const lapsDiv = document.querySelector('.laps');
+
+    function updateTimerDisplay() {
+      const hrs = String(Math.floor(timer / 3600)).padStart(2, '0');
+      const mins = String(Math.floor((timer % 3600) / 60)).padStart(2, '0');
+      const secs = String(timer % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hrs}:${mins}:${secs}`;
+    }
+
+    function startTimer() {
+      if (running) return;
+      running = true;
+      intervalId = setInterval(() => {
+        timer++;
+        updateTimerDisplay();
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      clearInterval(intervalId);
+      running = false;
+    }
+
+    function resetTimer() {
+      pauseTimer();
+      timer = 0;
+      updateTimerDisplay();
+      lapsDiv.innerHTML = '';
+    }
+
+    function lap() {
+      const lapTime = document.createElement('div');
+      lapTime.textContent = timerDisplay.textContent;
+      lapsDiv.appendChild(lapTime);
+    }
+  </script>
+</body>
+</html>

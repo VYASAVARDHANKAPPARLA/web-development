@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Portfolio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		/* General Styles */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-color: #f4f4f4;
+			color: #333;
+			line-height: 1.6;
+		}
+
+		/* Header Styles */
+		header {
+			background-color: #333;
+			color: white;
+			padding: 20px 0;
+			text-align: center;
+		}
+		header h1 {
+			font-size: 2.5em;
+			margin-bottom: 10px;
+		}
+
+		/* Navigation Styles */
+		nav {
+			display: flex;
+			justify-content: center;
+			background-color: #444;
+			padding: 10px 0;
+		}
+		nav a {
+			color: white;
+			text-decoration: none;
+			margin: 0 15px;
+			font-weight: bold;
+		}
+		nav a:hover,
+		nav a:focus {
+			text-decoration: underline;
+		}
+
+		/* Section Styles */
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.section {
+			margin: 40px 0;
+		}
+		.section h2 {
+			font-size: 2em;
+			color: #333;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.section p {
+			font-size: 1.2em;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		/* Skills Section */
+		.skills ul {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 20px;
+			list-style: none;
+			padding: 0;
+		}
+		.skills li {
+			background-color: #444;
+			color: white;
+			padding: 15px 30px;
+			border-radius: 10px;
+			font-size: 1.2em;
+		}
+
+		/* Projects Section */
+		.projects {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+		}
+		.project-card {
+			background-color: white;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+		.project-card h3 {
+			font-size: 1.5em;
+			color: #333;
+			margin-bottom: 10px;
+		}
+		.project-card p {
+			font-size: 1.1em;
+			color: #666;
+		}
+
+		/* Contact Section */
+		#contact a {
+			color: #333;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		#contact a:hover,
+		#contact a:focus {
+			text-decoration: underline;
+		}
+
+		/* Footer Styles */
+		footer {
+			background-color: #333;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			font-size: 0.9em;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Header Section -->
+	<header>
+		<h1>Welcome to My Portfolio</h1>
+		<p>Hi, I'm Vyasa Vardhan, a Web Developer</p>
+	</header>
+	
+	<!-- Navigation Bar -->
+	<nav>
+		<a href="#about-me">About Me</a>
+		<a href="#skills">Skills</a>
+		<a href="#projects">Projects</a>
+		<a href="#contact">Contact</a>
+	</nav>
+
+	<!-- Main Content -->
+	<div class="container">
+		<!-- About Me Section -->
+		<section id="about-me" class="section">
+			<h2>About Me</h2>
+			<p>
+				My name is Vyasa Vardhan, and I am a passionate web developer with experience in front-end and back-end technologies. I specialize in creating responsive and user-friendly websites. I enjoy learning new technologies and applying them to solve real-world problems.
+			</p>
+			<p>
+				I have experience in hackathons, and I've worked on projects involving Java and other cutting-edge technologies.
+			</p>
+		</section>
+		
+		<!-- Skills Section -->
+		<section id="skills" class="section skills">
+			<h2>Skills</h2>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>React</li>
+				<li>Node.js</li>
+				<li>MongoDB</li>
+				<li>Git</li>
+			</ul>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="section projects">
+			<h2>Projects</h2>
+			<div class="project-card">
+				<h3>Project 1: Web Application</h3>
+				<p>A brief description of this project and the technologies used.</p>
+			</div>
+			<div class="project-card">
+				<h3>Project 2: Portfolio Website</h3>
+				<p>This is my portfolio website showcasing my work as a web developer.</p>
+			</div>
+			<div class="project-card">
+				<h3>Project 3: E-commerce Website</h3>
+				<p>A full-stack e-commerce platform built with React and Node.js.</p>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="section">
+			<h2>Contact Me</h2>
+			<p>You can reach me at: <a href="mailto:vyasavardhan5@gmail.com">vyasavardhan5@gmail.com</a></p>
+			<p>Mobile Number: 9030893614</p>
+		</section>
+	</div>
+
+	<!-- Footer Section -->
+	<footer>
+		<p>&copy; 2024 Vyasa Vardhan. All rights reserved.</p>
+	</footer>
+</body>
+</html>
